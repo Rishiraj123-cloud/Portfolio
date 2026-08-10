@@ -1,0 +1,11 @@
+/* Specific component overrides will go here if necessary, but we rely on modular components and index.css for globals */
+.app-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}

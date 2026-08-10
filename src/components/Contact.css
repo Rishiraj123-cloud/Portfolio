@@ -1,0 +1,147 @@
+.contact-page {
+  padding: 10rem 0 6rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-header {
+  margin-bottom: 4rem;
+}
+
+.contact-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: #FFFFFF;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.contact-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: #A0A0A0;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.contact-form-container {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  border-radius: 4px;
+  max-width: 700px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #E63946;
+  letter-spacing: 0.05em;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.8rem 0;
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-bottom-color: #E63946;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #555;
+}
+
+.submit-btn {
+  background-color: #E63946;
+  color: #FFFFFF;
+  border: none;
+  padding: 1.2rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #d92328;
+}
+
+.submit-btn:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.error-text {
+  color: #E63946;
+  font-size: 0.85rem;
+}
+
+.success-message {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.success-title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.success-message p {
+  color: #A0A0A0;
+  margin-bottom: 2rem;
+}
+
+.reset-btn {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  border-color: #E63946;
+  color: #E63946;
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding-top: 8rem;
+  }
+  .contact-form-container {
+    padding: 2rem;
+  }
+}
