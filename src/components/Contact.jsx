@@ -16,7 +16,7 @@ const Contact = () => {
     setErrorMessage('');
 
     try {
-      const response = await fetch('http://localhost:5001/api/contact', {
+      const response = await fetch('https://portfolio-backend-3c2a.onrender.com/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
