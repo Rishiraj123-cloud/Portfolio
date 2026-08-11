@@ -47,56 +47,34 @@ app.post('/api/contact', (req, res) => {
   });
 });
 
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'rishikesh2026';
+
+app.post('/api/login', (req, res) => {
+  const { password } = req.body;
+  if (password === ADMIN_PASSWORD) {
+    res.json({ success: true, token: ADMIN_PASSWORD }); // Simple token for now
+  } else {
+    res.status(401).json({ success: false, error: 'Invalid password' });
+  }
+});
+
 app.get('/api/messages', (req, res) => {
+  const token = req.headers.authorization;
+  
+  if (token !== `Bearer ${ADMIN_PASSWORD}`) {
+    return res.status(401).json({ error: 'Unauthorized access' });
+  }
+
   const sql = 'SELECT * FROM messages ORDER BY created_at DESC';
   db.all(sql, [], (err, rows) => {
     if (err) {
-      return res.status(500).send('Failed to fetch messages.');
+      return res.status(500).json({ error: 'Failed to fetch messages.' });
     }
-
-    let html = `
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>Portfolio Messages</title>
-      <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f4f5; color: #18181b; padding: 2rem; }
-        .container { max-width: 800px; margin: 0 auto; }
-        h1 { border-bottom: 2px solid #e4e4e7; padding-bottom: 1rem; margin-bottom: 2rem; }
-        .message-card { background: white; border: 1px solid #e4e4e7; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
-        .name { font-weight: 700; font-size: 1.2rem; margin: 0; }
-        .email { color: #71717a; font-size: 0.9rem; margin-top: 0.2rem; }
-        .date { color: #a1a1aa; font-size: 0.8rem; }
-        .text { white-space: pre-wrap; line-height: 1.5; color: #3f3f46; margin: 0; background: #f8fafc; padding: 1rem; border-radius: 6px; border: 1px solid #e2e8f0; }
-      </style>
-    </head>
-    <body>
-      <div class="container">
-        <h1>Inbox</h1>
-        ${rows.length === 0 ? '<p>No messages received yet.</p>' : ''}
-        ${rows.map(row => `
-          <div class="message-card">
-            <div class="header">
-              <div>
-                <h2 class="name">${row.name}</h2>
-                <div class="email"><a href="mailto:${row.email}">${row.email}</a></div>
-              </div>
-              <div class="date">${new Date(row.created_at).toLocaleString()}</div>
-            </div>
-            <p class="text">${row.message}</p>
-          </div>
-        `).join('')}
-      </div>
-    </body>
-    </html>
-    `;
-    
-    res.send(html);
+    res.json(rows);
   });
 });
 
 // Start server
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Backend server is running on http://localhost:${PORT}`);
 });

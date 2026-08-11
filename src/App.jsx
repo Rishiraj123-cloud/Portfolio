@@ -10,6 +10,8 @@ import Footer from './components/Footer'
 import Contact from './components/Contact'
 import Portfolio from './components/Portfolio'
 import Preloader from './components/Preloader'
+import AdminLogin from './components/AdminLogin'
+import AdminDashboard from './components/AdminDashboard'
 import './App.css'
 
 const Home = () => {
@@ -60,6 +62,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/admin" element={<AdminLogin />} />
+        <Route path="/dashboard" element={<AdminDashboard />} />
       </Routes>
       <Footer />
     </div>
