@@ -74,20 +74,20 @@ const Hero = () => {
         {/* Top Marquee */}
         <div className="hero-top-marquee">
           <div className="marquee-content">
-            UI/UX DESIGN &nbsp;&nbsp;•&nbsp;&nbsp; FRONTEND DEVELOPMENT &nbsp;&nbsp;•&nbsp;&nbsp; WEB ANIMATION &nbsp;&nbsp;•&nbsp;&nbsp; BRANDING &nbsp;&nbsp;•&nbsp;&nbsp; INTERACTIVE EXPERIENCES
+            LUXURY VILLAS &nbsp;&nbsp;•&nbsp;&nbsp; EXCLUSIVE ESTATES &nbsp;&nbsp;•&nbsp;&nbsp; PREMIUM LOCATIONS &nbsp;&nbsp;•&nbsp;&nbsp; MODERN ARCHITECTURE &nbsp;&nbsp;•&nbsp;&nbsp; BESPOKE LIVING
           </div>
         </div>
 
         {/* Top Left Info */}
         <div className="hero-top-left">
-          <h1 className="hero-name">RISHIKESH</h1>
-          <p className="hero-subtitle">Creative Developer</p>
+          <h1 className="hero-name">ELEVATE</h1>
+          <p className="hero-subtitle">Luxury Real Estate</p>
         </div>
 
         {/* Top Right Info */}
         <div className="hero-top-right">
-          <p>Design that speaks.</p>
-          <p>Code that converts.</p>
+          <p>Find your sanctuary.</p>
+          <p>Experience modern living.</p>
         </div>
 
         {/* Canvas Sequence (The Subject) */}
@@ -106,7 +106,7 @@ const Hero = () => {
           className="hero-giant-text"
           style={{ y: creativeTextY }}
         >
-          CREATIVE
+          LUXURY
         </motion.div>
 
         {/* Bottom Right Title */}
@@ -114,7 +114,7 @@ const Hero = () => {
           className="hero-bottom-right-title"
           style={{ y: visualTextY }}
         >
-          DEVELOPER
+          ESTATES
         </motion.div>
 
         {/* Bottom Left Socials */}
@@ -127,7 +127,7 @@ const Hero = () => {
           className="hero-bottom-bio"
           style={{ y: bioY }}
         >
-          Between creativity and logic lies the space where I build. From architecting scalable frontend systems to shaping immersive digital experiences, my work revolves around performance, structure, and interactive storytelling. I help brands express who they are with purpose, precision, and personality.
+          Discover unparalleled luxury living in our carefully curated selection of prime real estate. Experience modern architecture seamlessly blended with breathtaking natural surroundings. Your dream home awaits.
         </motion.div>
         
       </div>

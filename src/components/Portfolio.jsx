@@ -53,9 +53,17 @@ const Portfolio = () => {
               <span className="cv-item-date">April 2026</span>
             </div>
             <p className="cv-item-subtitle">Conducted by Google Developers Groups AIT & Code Club</p>
-            <img src="/certificate2.jpg" alt="Cepheus Hackathon Certificate" style={{ marginTop: '1rem', width: '250px', borderRadius: '4px', border: '1px solid #ddd' }} />
+            <img src="/cephus3.jpeg" alt="Cepheus Hackathon Certificate" className="certificate-img" />
           </div>
-        </section>
+                    <div className="cv-item">
+              <div className="cv-item-header">
+                <h4 className="cv-item-title">LAEC Bidar</h4>
+                <span className="cv-item-date">Sep 2026</span>
+              </div>
+              <p className="cv-item-subtitle">Organized by LAEC Bidar</p>
+              <img src="/laec_2.jpeg" alt="LAEC Bidar Certificate" className="certificate-img" />
+            </div>
+          </section>
 
         <section className="cv-section">
           <h3 className="cv-section-title">Skills</h3>

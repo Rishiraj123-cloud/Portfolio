@@ -146,6 +146,8 @@
   line-height: 1.5;
 }
 
+.certificate-img { margin-top: 1rem; width: 250px; border-radius: 4px; border: 1px solid #ddd; }
+
 @media (max-width: 600px) {
   .cv-skills-grid {
     grid-template-columns: 1fr;

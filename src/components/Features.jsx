@@ -12,8 +12,8 @@ const processSteps = [
 ];
 
 const skillsList = [
-  "WEB DESIGN", "UI/UX DESIGN", "FIGMA", "FRAMER", 
-  "ADOBE XD", "PHOTOSHOP", "WEBFLOW", "HTML/CSS", 
+  "WEB DESIGN", "UI/UX DESIGN", "FIGMA", "FRAMER",
+  "ADOBE XD", "PHOTOSHOP", "WEBFLOW", "HTML/CSS",
   "JAVASCRIPT", "GSAP ANIMATION", "SEO BASICS"
 ];
 
@@ -21,22 +21,22 @@ const Features = () => {
   return (
     <section id="features" className="about-section container">
       <div className="about-grid">
-        
+
         {/* Column 1: Education & Skills */}
         <div className="about-col">
           <h2 className="section-heading mb-loose">EDUCATION & SKILLS</h2>
-          
+
           <div className="education-block">
             <h3 className="accent-heading">EDUCATION</h3>
-            
+
             <div className="edu-item">
               <div>
                 <h4 className="edu-title">B.E. in Computer Science Engineering</h4>
                 <p className="edu-subtitle">Nagarjuna College of Engineering and Technology</p>
               </div>
-              <span className="edu-date">2024-2028</span>
+              <span className="edu-date">2024 - 2028</span>
             </div>
-            
+
             <div className="edu-item">
               <div>
                 <h4 className="edu-title">UI/UX Design Certification</h4>
@@ -45,7 +45,7 @@ const Features = () => {
               <span className="edu-date">2023</span>
             </div>
           </div>
-          
+
           <div className="skills-block">
             <h3 className="accent-heading">SKILLS</h3>
             <div className="skills-tags">
@@ -59,7 +59,7 @@ const Features = () => {
         {/* Column 2: Work Process */}
         <div className="about-col">
           <h2 className="section-heading mb-loose">WORK PROCESS</h2>
-          
+
           <div className="process-timeline">
             {processSteps.map((step, i) => (
               <div key={i} className="process-step">
@@ -85,7 +85,7 @@ const Features = () => {
               Good design is not just how it looks, but how it works.
             </p>
             <div className="quote-signature font-signature">Rishikesh</div>
-            
+
             <div className="quote-footer">
               <p>LET'S CREATE SOMETHING GREAT TOGETHER.</p>
               <span className="quote-plus">+</span>
